@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <h1>My First Web Page</h1>
+    <p>My first paragraph.</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+     /* document.getElementById("demo").innerHTML = toCelsius(88)
+      function toCelsius(f){
+        return (5/9)*(f-32)
+      }*/
+      /*
+      const person ={
+        firstName: "Firomsa",
+        lastName: "Abrahim",
+        age: 24,
+        fullName: function(){
+          return person.firstName + " " + this.lastName
+        }
+      };
+      let x = "firstName"
+      person.nationality = "English";
+      delete person.age;
+      document.getElementById("demo1").innerHTML = person["firstName"];
+      document.getElementById("demo2").innerHTML = person[x]
+      console.log(person)*/
+      /*
+      myObj ={
+        name: "Firo",
+        age: 30,
+        myCars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat"
+        }
+      }
+      let text = "";
+      for(let x in myObj){
+        text += myObj[x] +" "
+      }
+      document.getElementById("demo1").innerHTML = myObj.myCars.car2;
+      document.getElementById("demo2").innerHTML = myObj.myCars["car1"];
+      document.getElementById("demo").innerHTML = text;
+      */
+     /*
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York"
+      };
+
+      // Create an Array
+      const myArray = Object.values(person);
+      const myString = JSON.stringify(person);
+
+      // Display the Array
+      document.getElementById("demo").innerHTML = myArray;
+      document.getElementById("demo1").innerHTML = myString;
+      const fruits= {banans:300, oranges:200, apples:500};
+      let text = "";
+      for(let [fruit, value] of Object.entries(fruits)){
+        text += fruit + ": " + value + "<br>"
+      }
+      document.getElementById("demo2").innerHTML = text;
+      */
+     //constructor function for person objects
+     function Person(first, last, age, eye){
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+      this.nationality = "English"
+      this.fullName = function() {
+        return this.firstName + " " + this.lastName;
+      };
+     }
+     // Creat a Person Object
+     const myFather = new Person("John", "Doe", 50, "blue")
+     myFather.changeName = function(name) {
+      this.lastName = name;
+     }
+     // Display age
+     changeName("isa")
+     document.getElementById("demo").innerHTML = myFather.fullName();
+
+    </script>
+
+  </body>
+</html>
